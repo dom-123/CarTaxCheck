@@ -9,6 +9,7 @@ import uk.co.cartaxcheck.config.ConfigReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
 import static uk.co.cartaxcheck.base.DriverContext.driver;
 
 public class Browser extends Base {
@@ -30,8 +31,9 @@ public class Browser extends Base {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver();
     }
+
     @After
-    public void closeBrowserSession () {
+    public void closerBrowserSession () {
         driver.quit();
     }
 }
